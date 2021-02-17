@@ -2,6 +2,7 @@
 
 namespace C_sharp
 {
+    public delegate void MyDelegate(int num);
     class Program
     {
         static void Main(string[] args)
@@ -40,9 +41,19 @@ namespace C_sharp
             Inheritance inheritance = new Inheritance("boook",23);
             BookAuthor bookAuthor = new BookAuthor("Riya",22);
 
-            Console.WriteLine(inheritance.authorName);
+           /* Console.WriteLine(inheritance.authorName);
             Console.WriteLine(bookAuthor.authorName);
-            inheritance.showclass();
+            inheritance.showclass();*/
+
+            //---------------Collections-------------------//
+            Collections collections = new Collections();
+            //collections.func();
+
+            //---------------Delegates---------------------//
+            //Delegates delegates = new Delegates();
+            MyDelegate nm = new MyDelegate(Delegates.sqr);
+            nm(10);
+
             //-------------------------------------------------//
             Console.ReadLine();
         }
