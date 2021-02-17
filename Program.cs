@@ -15,7 +15,34 @@ namespace C_sharp
 
             //---------------Guessing game----------------------//
             GuessingGameCsharp GG_OBJ = new GuessingGameCsharp();
-            GG_OBJ.func();
+            //GG_OBJ.func();
+
+            //--------------Properties------------------------//
+            PropertiesCsharp propertiesCsharp = new PropertiesCsharp("Ishmam");
+            /*Console.WriteLine(propertiesCsharp.Name);
+            propertiesCsharp.Name = "Riya";
+            Console.WriteLine(propertiesCsharp.Name);*/
+
+            //--------------Loop------------------------//
+            LoopCsharp loopCsharp = new LoopCsharp();
+            //loopCsharp.func();
+
+            //------------static attribute------------------//
+            StaticAttribute staticAttribute = new StaticAttribute();
+            /*Console.WriteLine(StaticAttribute.objectcount);
+            StaticAttribute staticAttribute1 = new StaticAttribute();
+            Console.WriteLine(StaticAttribute.objectcount);*/
+
+            //------------static method------------------//
+            //NeedyTools.func("Omi");
+
+            //---------------Inheritance-------------------//
+            Inheritance inheritance = new Inheritance("boook",23);
+            BookAuthor bookAuthor = new BookAuthor("Riya",22);
+
+            Console.WriteLine(inheritance.authorName);
+            Console.WriteLine(bookAuthor.authorName);
+            inheritance.showclass();
             //-------------------------------------------------//
             Console.ReadLine();
         }
