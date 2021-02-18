@@ -4,11 +4,14 @@ using System.Text;
 
 namespace C_sharp
 {
-    class Inheritance : BookAuthor
+    public class Inheritance : BookAuthor
     {
         public string BookName;
         public int BookPage;
 
+        public Inheritance()
+        {
+        }
 
         public Inheritance(string BN, int BP):base("ishmam",222)
         {

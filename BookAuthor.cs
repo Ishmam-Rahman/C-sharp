@@ -4,7 +4,7 @@ using System.Text;
 
 namespace C_sharp
 {
-    class BookAuthor
+    public class BookAuthor
     {
         protected string AuthorName;
         protected int AuthorAge;
@@ -19,6 +19,10 @@ namespace C_sharp
         {
             AuthorAge = AA;
             AuthorName = AN;
+        }
+
+        public BookAuthor()
+        {
         }
 
         public string authorName

@@ -3,8 +3,11 @@
 namespace C_sharp
 {
     public delegate void MyDelegate(int num);
+    public delegate Inheritance covardel(BookAuthor bookAuthor);
     class Program
     {
+        private static Func<BookAuthor, Inheritance> covardel;
+
         static void Main(string[] args)
         {
             //-----------Working with String------------------//
@@ -51,8 +54,18 @@ namespace C_sharp
 
             //---------------Delegates---------------------//
             //Delegates delegates = new Delegates();
-            MyDelegate nm = new MyDelegate(Delegates.sqr);
-            nm(10);
+            MyDelegate nm = Delegates.sqr;
+            //nm(10);
+
+            //--------------Event---------------------------//
+            EventsManage eventsManage = new EventsManage();
+            /*eventsManage.TaskCompleted += eventsManage.completed;
+            eventsManage.ProcessCompleted += eventsManage.Pcompleted;
+            eventsManage.TaskStart();*/
+
+            //--------------Covariance-------------------------//
+            covardel del= ConvarianceCsharp.M1;
+            Inheritance in1= del(new BookAuthor());
 
             //-------------------------------------------------//
             Console.ReadLine();
